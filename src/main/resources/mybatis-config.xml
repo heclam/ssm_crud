@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ <configuration>
+     <settings>
+         <!-- 是否开启自动驼峰命名规则映射 
+         		既从经典数据库列名A_COLUMN到经典Java属性名aColumn的类似映射-->
+         		<setting name="mapUnderscoreToCamelCase" value="true"/>
+     </settings>
+     <!-- 配置别名 -->
+     <typeAliases>
+         <package name="com.luo.crud.bean"/>
+     </typeAliases>
+     <!-- 这是pageHelper需要配置的插件 -->
+     <plugins>
+         <!--com.github.pagehelper.PageInterceptor为pageHelper所在的类  -->
+         <plugin interceptor="com.github.pagehelper.PageInterceptor">
+             <!-- 配置这个reasonable使分页合理 -->
+             <property name="reasonable" value="true"/>
+         </plugin>
+     </plugins>
+ </configuration>

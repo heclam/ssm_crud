@@ -1,0 +1,6 @@
+#这里标注不推送的内容
+#maven ignore
+target/
+
+*.class
+
